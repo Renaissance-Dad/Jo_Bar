@@ -11,6 +11,7 @@
     {"name":"bg_image","order":1,"path":"sprites/bg_image/bg_image.yy",},
     {"name":"spr_90s_squiggle","order":2,"path":"sprites/spr_90s_squiggle/spr_90s_squiggle.yy",},
     {"name":"spr_racingstripes","order":1,"path":"sprites/spr_racingstripes/spr_racingstripes.yy",},
+    {"name":"spr_squiggle_mask","order":4,"path":"sprites/spr_squiggle_mask/spr_squiggle_mask.yy",},
     {"name":"spr_textarea","order":3,"path":"sprites/spr_textarea/spr_textarea.yy",},
     {"name":"spr_umbrella_mask","order":2,"path":"sprites/spr_umbrella_mask/spr_umbrella_mask.yy",},
     {"name":"spr_umbrella","order":1,"path":"sprites/spr_umbrella/spr_umbrella.yy",},
