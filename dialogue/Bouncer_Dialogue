@@ -1,0 +1,86 @@
+:: StoryTitle
+Jo's Bar
+
+
+:: StoryData
+{
+  "ifid": "D10B3AE1-90B6-4994-9E31-52981A618A3A",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "The Bouncer At The Door",
+  "zoom": 1
+}
+
+
+:: Bouncer/Happy {"position":"800,300","size":"100,100"}
+"You absolute fuckin legend! I've been saying to Danny to get the gutter fixed for ages! Thanks!"
+
+The bouncer takes the umbrella from you and happily props it over his head. 
+
+(if:(history: where its name contains "Introduction/Bouncer")'s length is 1)["You're welcome! I should head in, see you in a bit."]
+(if:(history: where its name contains "Introduction/Bouncer")'s length is 0)[["You're welcome! Can you help me? I'm suppsed to be doing a trial shift here tonight. I'm Jane."|Introduction/Bouncer]]
+
+
+:: Introduction/Bouncer {"position":"800,500","size":"100,100"}
+"Oh, //you're// the new bartender? Well, shit, you should've said."
+
+He stands aside to let you in. 
+
+"The main entrance is round the front, but the other barstaff usually use this door to go for ''smoke breaks''."
+
+(if:(history: where its name contains "Umbrella/Inventory")'s length is 1) [["Want this?" Offer umbrella.|Bouncer/Happy]]
+
+
+:: Lost {"position":"350,250","size":"100,100"}
+This definitely isn't right. You could have sworn you've been here before. (if:(history: where its name contains "Umbrella/Inventory")'s length is 0)[That black umbrella looks familiar.]
+
+(if:(history: where its name contains "Umbrella/Inventory")'s length is 0)[[Pick up the umbrella.|Umbrella/Inventory.]]
+[[Retrace your steps.|The Bouncer At The Door]]
+
+
+
+
+
+:: Rude {"position":"500,600","size":"100,100"}
+"Yeah? Entrance is that way." He points in the direction you just came from. 
+
+[["Cheers, thanks."|Lost]]
+[["Thanks. I'm Jane, by the way. Sorry I snapped, I'm supposed to be doing a trial shift and I'm a bit nervous."|Introduction/Bouncer]]
+
+
+
+
+:: The Bouncer At The Door {"position":"600,200","size":"100,100"}
+There is a broad shouldered bouncer leaning against the doorframe, unsuccessfully trying to avoid getting his hair wet. 
+
+[[Ignore him and try to find your way out of the alley.|Lost]]
+(if:(history: where its name contains "Y'alright mate?")'s length is 0)[["Y'alright, mate? How's it goin?"|Y'alright mate?]]
+(if:(history: where its name contains "Rude")'s length is 1)[["Did you just send me the wrong way?"|Wrong Way]]
+(if:(history: where its name contains "Umbrella/Inventory")'s length is 1)+(unless:(history: where its name contains "Bouncer/Happy")'s length is 1)  [["Want this?" Offer umbrella.|Bouncer/Happy]]
+
+
+:: Umbrella/Inventory. {"position":"300,500","size":"100,100"}
+The umbrella sticks a bit when you open it. 
+
+[[Look for the entrance.|The Bouncer At The Door]]
+
+
+
+
+:: Wrong Way {"position":"700,700","size":"100,100"}
+"Yep."
+
+(if:visits is 1)[["That's because I was a dick. Isn't it."|Wrong Way]] (if:visits is an even)[["Sorry I snapped, I'm supposed to be doing a trial shift and I'm a bit nervous."|Introduction/Bouncer]]
+
+
+:: Y'alright mate? {"position":"600,400","size":"100,100"}
+He looks you up and down. A droplet of rain follows the shaved slit in his eyebrow straight into his left eye. He blinks furiously. He suddenly seems much less intimidating. 
+
+"And where have you been tonight, pal?" he asks, gaze shifting from your face to your hands. He's trying to work out how sober you are.  
+
+[["I'm not a punter, //pal//. I'm trying to work out where the entrace to Jo's is."|Rude]]
+[["I've just come from home, I'm suppsed to be doing a trial shift here tonight. I'm Jane."|Introduction/Bouncer]]
+
+(if:(history: where its name contains "Umbrella/Inventory")'s length is 1)+(unless:(history: where its name contains "Bouncer/Happy")'s length is 1)  [["Want this?" Offer umbrella.|Bouncer/Happy]]
+
+

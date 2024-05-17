@@ -1,11 +1,11 @@
 {
   "$GMSprite":"",
   "%Name":"spr_skeleton_down",
-  "bboxMode":0,
-  "bbox_bottom":79,
-  "bbox_left":2,
-  "bbox_right":29,
-  "bbox_top":6,
+  "bboxMode":2,
+  "bbox_bottom":48,
+  "bbox_left":16,
+  "bbox_right":32,
+  "bbox_top":32,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -118,5 +118,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":32,
+  "width":48,
 }
