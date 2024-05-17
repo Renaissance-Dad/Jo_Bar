@@ -66,6 +66,7 @@
     {"id":{"name":"spr_skeleton_left","path":"sprites/spr_skeleton_left/spr_skeleton_left.yy",},},
     {"id":{"name":"spr_skeleton_right","path":"sprites/spr_skeleton_right/spr_skeleton_right.yy",},},
     {"id":{"name":"spr_skeleton_up","path":"sprites/spr_skeleton_up/spr_skeleton_up.yy",},},
+    {"id":{"name":"spr_squiggle_mask","path":"sprites/spr_squiggle_mask/spr_squiggle_mask.yy",},},
     {"id":{"name":"spr_textarea","path":"sprites/spr_textarea/spr_textarea.yy",},},
     {"id":{"name":"spr_triangle","path":"sprites/spr_triangle/spr_triangle.yy",},},
     {"id":{"name":"spr_umbrella_mask","path":"sprites/spr_umbrella_mask/spr_umbrella_mask.yy",},},
