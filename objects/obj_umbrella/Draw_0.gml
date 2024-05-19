@@ -6,7 +6,8 @@ draw_self();
 
 if(place_meeting(x, y, obj_skeleton))
 	{
-	draw_text(x, y, "test");	
-	global.my_textbox = layer_sequence_create("Text", 0, 32, sq_textbox);
+	if (global.my_textbox == -1)
+		{
+		global.my_textbox = layer_sequence_create("Text", 0, 32, sq_textbox);
+		}
 	}
-

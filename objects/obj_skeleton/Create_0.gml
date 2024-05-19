@@ -10,5 +10,4 @@ sprite[DOWN] = spr_skeleton_down;
 
 face = DOWN;
 
-/// @description Insert description here
-// You can write your code in this editor
+depth = -1000;
