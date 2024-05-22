@@ -3,6 +3,12 @@ var _left_key = keyboard_check(vk_left);
 var _up_key = keyboard_check(vk_up);
 var _down_key = keyboard_check(vk_down);
 
+if (global.game_state == GameState.TextMode)
+{
+	image_index = 0;
+	exit
+}
+
 //x_speed and y_speed calculation
 x_speed = (_right_key - _left_key) * top_speed;
 y_speed = (_down_key - _up_key) * top_speed;
